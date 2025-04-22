@@ -1,0 +1,25 @@
+package com.br.Cidade.mappers;
+
+import com.br.Cidade.dtos.CidadeRequest;
+import com.br.Cidade.dtos.CidadeResponse;
+import com.br.Cidade.entities.Cidade;
+
+public class CidadeMapper {
+
+    public static Cidade toEntity(CidadeRequest request){
+        return Cidade.builder()
+            .nome(request.nome())
+            .uf(request.uf())
+            .build();
+    }
+
+    public static CidadeResponse toResponse(Cidade entity){
+        return new CidadeResponse(entity.getId(),entity.getNome(),entity.getUf());
+    }
+
+    public static void updateEntity(Cidade entity,CidadeRequest request){
+        entity.setNome(request.nome());
+        entity.setUf(request.uf().toUpperCase());
+    }
+
+}
