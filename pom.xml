@@ -61,6 +61,11 @@
             <version>1.18.36</version>
             <optional>true</optional>
         </dependency>
+        <!-- Bean Validation -->
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-hibernate-validator</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>io.quarkus</groupId>
@@ -110,13 +115,14 @@
                     </execution>
                 </executions>
             </plugin>
+<!--             
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${compiler-plugin.version}</version>
                 <configuration>
                     <parameters>true</parameters>
                 </configuration>
-            </plugin>
+            </plugin> -->
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${surefire-plugin.version}</version>
