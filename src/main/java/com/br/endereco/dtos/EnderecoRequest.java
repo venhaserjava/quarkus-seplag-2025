@@ -8,6 +8,7 @@ import jakarta.validation.constraints.Size;
 
 @UniqueEndereco
 public record EnderecoRequest(
+    
     @NotBlank
     @Size(max = 50)
     String tipoLogradouro,
