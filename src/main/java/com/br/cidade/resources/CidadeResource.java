@@ -1,7 +1,7 @@
-package com.br.Cidade.resources;
+package com.br.cidade.resources;
 
-import com.br.Cidade.dtos.CidadeRequest;
-import com.br.Cidade.services.CidadeService;
+import com.br.cidade.dtos.CidadeRequest;
+import com.br.cidade.services.CidadeService;
 
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;

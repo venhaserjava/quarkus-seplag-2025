@@ -1,8 +1,8 @@
-package com.br.Cidade.repositories;
+package com.br.cidade.repositories;
 
 import java.util.Optional;
 
-import com.br.Cidade.entities.Cidade;
+import com.br.cidade.entities.Cidade;
 
 import io.quarkus.hibernate.orm.panache.PanacheQuery;
 import io.quarkus.hibernate.orm.panache.PanacheRepository;

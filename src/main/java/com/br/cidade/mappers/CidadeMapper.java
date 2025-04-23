@@ -1,8 +1,8 @@
-package com.br.Cidade.mappers;
+package com.br.cidade.mappers;
 
-import com.br.Cidade.dtos.CidadeRequest;
-import com.br.Cidade.dtos.CidadeResponse;
-import com.br.Cidade.entities.Cidade;
+import com.br.cidade.dtos.CidadeRequest;
+import com.br.cidade.dtos.CidadeResponse;
+import com.br.cidade.entities.Cidade;
 
 public class CidadeMapper {
 

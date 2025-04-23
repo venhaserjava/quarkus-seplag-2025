@@ -1,14 +1,14 @@
-package com.br.Cidade.services;
+package com.br.cidade.services;
 
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.br.Cidade.dtos.CidadeRequest;
-import com.br.Cidade.dtos.CidadeResponse;
-import com.br.Cidade.entities.Cidade;
-import com.br.Cidade.mappers.CidadeMapper;
-import com.br.Cidade.repositories.CidadeRepository;
+import com.br.cidade.dtos.CidadeRequest;
+import com.br.cidade.dtos.CidadeResponse;
+import com.br.cidade.entities.Cidade;
+import com.br.cidade.mappers.CidadeMapper;
+import com.br.cidade.repositories.CidadeRepository;
 import com.br.commons.dtos.PagedResponseDTO;
 import com.br.commons.exceptions.ResourceNotFoundException;
 import io.quarkus.panache.common.Page;

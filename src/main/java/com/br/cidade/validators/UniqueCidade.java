@@ -1,4 +1,4 @@
-package com.br.Cidade.validators;
+package com.br.cidade.validators;
 
 import java.lang.annotation.Documented;
 

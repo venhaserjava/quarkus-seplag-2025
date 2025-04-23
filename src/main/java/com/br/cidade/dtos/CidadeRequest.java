@@ -1,7 +1,7 @@
-package com.br.Cidade.dtos;
+package com.br.cidade.dtos;
 
-import com.br.Cidade.validators.UniqueCidade;
-import com.br.Cidade.validators.ValidUF;
+import com.br.cidade.validators.UniqueCidade;
+import com.br.cidade.validators.ValidUF;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;

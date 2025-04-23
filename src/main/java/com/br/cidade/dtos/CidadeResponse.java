@@ -1,4 +1,4 @@
-package com.br.Cidade.dtos;
+package com.br.cidade.dtos;
 
 public record CidadeResponse(
     Long id,

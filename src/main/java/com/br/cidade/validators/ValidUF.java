@@ -1,4 +1,4 @@
-package com.br.Cidade.validators;
+package com.br.cidade.validators;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;

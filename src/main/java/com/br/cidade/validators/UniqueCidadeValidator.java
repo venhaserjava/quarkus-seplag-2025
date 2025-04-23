@@ -1,7 +1,7 @@
-package com.br.Cidade.validators;
+package com.br.cidade.validators;
 
-import com.br.Cidade.dtos.CidadeRequest;
-import com.br.Cidade.repositories.CidadeRepository;
+import com.br.cidade.dtos.CidadeRequest;
+import com.br.cidade.repositories.CidadeRepository;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;

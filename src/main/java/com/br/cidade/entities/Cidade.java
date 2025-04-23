@@ -1,4 +1,4 @@
-package com.br.Cidade.entities;
+package com.br.cidade.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
