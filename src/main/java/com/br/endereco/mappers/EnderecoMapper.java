@@ -20,11 +20,11 @@ public class EnderecoMapper {
     public static EnderecoResponse toResponse(Endereco e){
         return new EnderecoResponse(
             e.getId(),
-         e.getTipo_logradouro(),
-         e.getLogradouro(),
-         e.getNumero(),
-         e.getBairro(),
-         e.getCidade().getId()
+            e.getTipo_logradouro(),
+            e.getLogradouro(),
+            e.getNumero(),
+            e.getBairro(),
+            e.getCidade().getId()
         );
     }
     public static void updateEntity(Endereco e,EnderecoRequest request,Cidade cidade
