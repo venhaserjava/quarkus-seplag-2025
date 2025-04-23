@@ -14,6 +14,9 @@ public class CidadeMapper {
     }
 
     public static CidadeResponse toResponse(Cidade entity){
+        if (entity==null) {
+            return new CidadeResponse(null, null, null);
+        }
         return new CidadeResponse(entity.getId(),entity.getNome(),entity.getUf());
     }
 
