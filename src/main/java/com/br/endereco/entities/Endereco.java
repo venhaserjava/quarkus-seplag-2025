@@ -11,6 +11,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
 import lombok.AllArgsConstructor;
@@ -61,7 +62,10 @@ public class Endereco {
         nullable = false,
         foreignKey = @ForeignKey(name = "fk_endereco_cidade")
     )
-    private Cidade cidade;
-    
+    private Cidade cidade;    
+
+
+    // @OneToMany(mappedBy = "endereco")
+    // private Set<UnidadeEndereco> unidadeEnderecos;
 
 }
