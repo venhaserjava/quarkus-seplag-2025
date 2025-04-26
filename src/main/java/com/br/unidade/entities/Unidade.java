@@ -1,10 +1,12 @@
 package com.br.unidade.entities;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
 import lombok.AllArgsConstructor;
@@ -42,5 +44,8 @@ public class Unidade {
 
     @Column(name = "unid_sigla",nullable = false,length = 20)
     private String sigla;
+
+    @OneToOne(mappedBy = "unidade", cascade = CascadeType.ALL)
+    private UnidadeEndereco unidadeEndereco;
 
 }

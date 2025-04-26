@@ -10,7 +10,7 @@ import jakarta.enterprise.context.ApplicationScoped;
 @ApplicationScoped
 public class EnderecoRepository  implements PanacheRepository<Endereco>{
 
-    public Optional<Endereco> findByTipoLogradouroAndLogradouroAndNumeroAndBairroAndCidadeId(
+    public Optional<Endereco> findByTipoLogradouroAndLogradouroAndNumeroAndBairroAndCidadeId(        
         String tipoLogradouro,
         String logradouro,
         Integer numero,
