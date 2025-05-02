@@ -80,7 +80,7 @@ public class UnidadeService {
         unidadeEnderecoRepository.persist(unidadeEndereco);
 
         unidade.setUnidadeEndereco(unidadeEndereco);
-        return unidadeMapper.toResponse(unidade);
+        return UnidadeMapper.toResponse(unidade);
     }
 
     public PagedResponseDTO<UnidadeResponse> findAll(int page, int size){
@@ -89,7 +89,7 @@ public class UnidadeService {
 
         List<UnidadeResponse> content = unidades.stream()
             .map(unidade ->{
-                Endereco endereco = unidadeEnderecoRepository.findEnderecoByUnidade(unidade);
+//                Endereco endereco = unidadeEnderecoRepository.findEnderecoByUnidade(unidade);
                 return UnidadeMapper.toResponse(unidade);
 
             })
@@ -102,13 +102,17 @@ public class UnidadeService {
     public UnidadeResponse findById(Long id){
         Unidade unidade = unidadeRepository.findByIdOptional(id)
                             .orElseThrow(() -> new RuntimeException("unidade não encontrada"));
-        Endereco endereco = unidadeEnderecoRepository.findEnderecoByUnidade(unidade);
-
+//        Endereco endereco = unidadeEnderecoRepository.findEnderecoByUnidade(unidade);
         return UnidadeMapper.toResponse(unidade);
-
     }
-
-
-
+    @Transactional
+    public UnidadeResponse update(Long id, UnidadeRequest request){
+        Unidade unidade = unidadeRepository.findByIdOptional(id)
+                              .orElseThrow(() -> new RuntimeException("Unidade não encontrada"));
+            unidade.setNome(request.getNome());
+            unidade.setSigla(request.getSigla());
+            unidadeRepository.persist(unidade);
+            return UnidadeMapper.toResponse(unidade);        
+    }
 
 }
