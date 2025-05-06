@@ -12,18 +12,16 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
-//import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "unidade_endereco")
-//@Builder
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class UnidadeEndereco {
-
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -36,5 +34,4 @@ public class UnidadeEndereco {
     @ManyToOne
     @JoinColumn(name = "end_id",referencedColumnName = "end_id",nullable = false)
     private Endereco endereco;
-
 }

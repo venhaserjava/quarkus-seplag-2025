@@ -1,6 +1,9 @@
 package com.br.endereco.entities;
 
+import java.util.Set;
+
 import com.br.cidade.entities.Cidade;
+import com.br.unidade.entities.UnidadeEndereco;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -65,7 +68,7 @@ public class Endereco {
     private Cidade cidade;    
 
 
-    // @OneToMany(mappedBy = "endereco")
-    // private Set<UnidadeEndereco> unidadeEnderecos;
+    @OneToMany(mappedBy = "endereco")
+    private Set<UnidadeEndereco> unidadeEnderecos;
 
 }
